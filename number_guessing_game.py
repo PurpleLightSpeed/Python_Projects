@@ -4,17 +4,18 @@ number = ran(1,100)
 attempts = 0
 
 while True:
-    guess = int(input("Guess the number between 1 and 100: "))
-    attempts += 1
+    try:
+        guess = int(input("Guess the number between 1 and 100: "))
+        attempts += 1
 
-    if guess < number:
-        print("Too low! Try again.")
+        if guess < number:
+         print("Too low! Try again.")
 
-    elif guess > number:
-        print("Too high! Try again.")
+        elif guess > number:
+         print("Too high! Try again.")
 
-    elif guess == number:
-        print(f"Congratulations! You've guessed the number {number} in {attempts} attempts.")
-        break
-    else:
+        else:
+            print(f"Congratulations! You've guessed the number {number} in {attempts} attempts.")
+            break
+    except ValueError:
         print("Please enter a valid number.")
