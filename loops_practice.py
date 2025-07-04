@@ -147,4 +147,10 @@ print(f"Is any value True? {result}")
 '''
 
 ## Challenge 3
-#
+# - Use a loop to traverse through the numbers array
+# - Print "Yes" if the array contains at least on even number
+# - Print "No" otherwise
+
+numbers = [33, 39, 11, 99, 101, 89, 45, 51, 32, 44]
+has_even_number = any(number % 2 == 0 for number in numbers)
+print("Yes" if has_even_number else "No")
