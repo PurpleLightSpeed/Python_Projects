@@ -81,9 +81,8 @@ while True:
     i += 1
 '''
 ## Challenge 2
-# Loop thorugh all the numbers 1 to 100 (inclusive) and print specific messages for multiples of 3, 5, and 3 & 5.
-# Common interview challenge: Missing Link
 
+# Loop thorugh all the numbers 1 to 100 (inclusive) and print specific messages for multiples of 3, 5, and 3 & 5.
 # - If the number is a multiple of 3, print "Fizz"
 # - If the number is a multiple of 5, print "Buzz"
 # - If the number is a multiple of 3 and 5, print "FizzBuzz"
@@ -147,6 +146,7 @@ print(f"Is any value True? {result}")
 '''
 
 ## Challenge 3
+
 # - Use a loop to traverse through the numbers array
 # - Print "Yes" if the array contains at least on even number
 # - Print "No" otherwise
@@ -158,3 +158,61 @@ print("Yes" if has_even_number else "No")
 '''
 
 # Sum of numbers demonstration
+'''
+numbers = [1, 2, 3, 4, 5]
+total = sum(numbers)
+print(f"Sum of numbers: {total}")
+'''
+
+'''
+# Sum of Squares 0-3
+total_squares = sum(x * x for x in range(4))
+print(f"Sum of squares: {total_squares}")
+'''
+## Challenge 4
+
+# - Use a loop that will traverse through the numbers array
+# - Count the total number of even numbers
+# - Print it to the console
+'''
+numbers = [33, 39, 11, 99, 101, 89, 45, 51, 32, 44]
+number_of_even_numbers = sum(1 for number in numbers if number % 2 == 0)
+print(number_of_even_numbers)
+'''
+
+## Challenge 5 
+# - Use a loop to go through all of the letters in a string
+# - Count the number of spaces and print the number of spaces in the string
+
+'''
+message = "I love to eat apples and bananas for breakfast."
+number_of_spaces = sum(1 for char in message if char == " ")
+print(number_of_spaces)
+'''
+
+## Challeneg 6
+# Given a list of numbers, perform various calculations
+array = [13, 35, 54, 81, 103, 76, 1, 54, 17, 99]
+
+# - Find the sum of all numbers
+sum_of_all_numbers = sum(array)
+print(sum_of_all_numbers)
+
+# - Find the average of all numbers
+average_of_all_numbers = sum(array) / len(array)
+print(average_of_all_numbers)
+
+# -  Find the maximum and minimum numbers
+max_number = max(array)
+print(max_number)
+min_number = min(array)
+print(min_number)
+
+# - Find the sum of all even numbers
+sum_of_all_even_numbers = sum(x for x in array if x % 2 == 0)
+print(sum_of_all_even_numbers)
+
+# - Find average of all odd numbers
+odd_number = [x for x in array if x % 2 != 0]
+average_odd = sum(odd_number) / len(odd_number) if odd_number else 0
+print(average_odd)
